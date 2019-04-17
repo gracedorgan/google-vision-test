@@ -1,12 +1,8 @@
 /* eslint-disable no-unused-vars */
-import $ from 'jquery';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './style.scss';
 
-const mainel = document.getElementById('main');
-let seconds = 0;
-function incrementSeconds() {
-  seconds += 1;
-  mainel.innerText = `You have been here for ${seconds} seconds.`;
-}
-setInterval(incrementSeconds, 1000);
+const App = () => <div className="test">All the REACT are belong to us!</div>;
+
+ReactDOM.render(<App />, document.getElementById('main'));
