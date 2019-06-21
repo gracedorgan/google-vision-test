@@ -5,38 +5,20 @@ import {
 } from 'react-router-dom';
 // import ReactDOM from 'react-dom';
 import '../style.scss';
-import Controls from './controls';
-import Counter from '../containers/counter';
+import Photo from './photo';
+import Results from './results';
+import Welcome from './welcome';
 
-const Test = props => (
-<div>
-    ID: {props.match.params.id}
-    <Counter/>
-    <Controls/>
-</div>
-);
-const About = props => <div> All there is to know about me </div>;
-const Welcome = props => <div>Welcome</div>;
+
 const FallBack = props => <div>URL Not Found</div>;
-const Nav = props => (
-    <nav>
-      <ul>
-        <li><NavLink to="/" exact>Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
-      </ul>
-    </nav>
-);
 
 const App = props => (
     <Router>
       <div>
-        <Nav />
         <Switch>
             <Route exact path="/" component={Welcome} />
-            <Route path="/about" component={About} />
-            <Route exact path="/test/:id" component={Test} />
+            <Route exact path="/photos/:photoID" component={Photo} />
+            <Route exact path="/results" component={Results} />
             <Route component={FallBack} />
         </Switch>
       </div>
