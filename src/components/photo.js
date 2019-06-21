@@ -72,6 +72,7 @@ class Photo extends Component {
         setTimeout(() => {
           if (this.props.nextPhoto != null) {
             this.props.history.push(`/photos/${this.props.nextPhoto._id}`);
+            this.props.fetchPhoto(this.props.match.params.photoID, this.props.history);
           }
         }, 100);
       } else {

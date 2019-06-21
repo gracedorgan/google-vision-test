@@ -32,7 +32,7 @@ Linter/Testing:
 To run locally:
 1. Clone the repository and `cd google-vision-test`
 2. `yarn` & `npm install`
-3. first `yarn dev` the server, then `yarn start` in this repository
+3. `yarn start` in this repository - this is set up to run with the server on heroku. Currently it has 5 items in the database to be tested.
 
 ## Deployment
 
