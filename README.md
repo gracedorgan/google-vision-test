@@ -32,11 +32,11 @@ Linter/Testing:
 To run locally:
 1. Clone the repository and `cd google-vision-test`
 2. `yarn` & `npm install`
-3. yarn start (server is published on heroku)
+3. first `yarn dev` the server, then `yarn start` in this repository
 
 ## Deployment
 
-*Coming soon to App Store*
+Can be published as website
 
 ## Authors
 * Grace Dorgan
